@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Service Plans</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn-select-plan {
+            width: 100%;
+        }
+
+        #billingCycleModal .modal-dialog {
+            max-width: 400px;
+        }
+
+        #billingCycleModal .modal-content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/mainpage.html">
+        <img src="/assets/img/logo.png" alt="NeoVPN" width="50" height="50">
+        NeoVPN
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">What Is VPN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Download VPN</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">VPN Servers</a>
+            </li>
+        </ul>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="/account/index.html">My Account</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container">
+    <h1 class="text-center mb-4">VPN Service Plans</h1>
+
+    <div class="row">
+        <!-- Plan 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Basic Plan</h5>
+                    <p class="card-text">Ideal for light users.</p>
+                    <p class="price">$9.99/month</p>
+                    <button class="btn btn-primary btn-select-plan" data-toggle="modal" data-target="#billingCycleModal" data-plan="Basic">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Standard Plan</h5>
+                    <p class="card-text">Perfect for regular users.</p>
+                    <p class="price">$14.99/month</p>
+                    <button class="btn btn-primary btn-select-plan" data-toggle="modal" data-target="#billingCycleModal" data-plan="Standard">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Premium Plan</h5>
+                    <p class="card-text">For power users and businesses.</p>
+                    <p class="price">$19.99/month</p>
+                    <button class="btn btn-primary btn-select-plan" data-toggle="modal" data-target="#billingCycleModal" data-plan="Premium">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Billing Cycle Modal -->
+<div class="modal" id="billingCycleModal" tabindex="-1" role="dialog" aria-labelledby="billingCycleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="billingCycleModalLabel">Select Billing Cycle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Please choose the billing cycle for your selected plan.</p>
+                <select class="form-control" id="billingCycleSelect">
+                    <option value="monthly">Monthly</option>
+                    <option value="annual">Annual (10% off)</option>
+                    <option value="lifetime">Lifetime</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Handle plan selection
+    $('.btn-select-plan').click(function() {
+        var plan = $(this).data('plan');
+        $('#billingCycleModalLabel').text('Select Billing Cycle - ' + plan + ' Plan');
+        $('#checkoutBtn').data('plan', plan);
+    });
+
+    // Handle checkout button click
+    $('#checkoutBtn').click(function() {
+        var plan = $(this).data('plan');
+        var billingCycle = $('#billingCycleSelect').val();
+        alert('You have selected the ' + billingCycle + ' billing cycle for the ' + plan + ' Plan. Proceed to checkout...');
+    });
+</script>
+</body>
+</html>

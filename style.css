@@ -1,0 +1,88 @@
+/* Custom style to reduce the distance between logo and text */
+.navbar-brand img {
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+
+/* Custom styles for the body content */
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #007bff;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+h1, h2 {
+    color: #007bff;
+}
+
+p {
+    color: #495057;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #495057;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Info section styles */
+.info-section {
+    background-color: #007bff;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+    margin-top: 20px;
+}
+
+/* Adjusted spacing for better readability */
+.info-section p {
+    margin-bottom: 15px;
+}
+
+/* Hover effect for info section */
+.info-section:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the call-to-action button */
+.cta-button, .buy-button {
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for the buttons */
+.cta-button:hover, .buy-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}

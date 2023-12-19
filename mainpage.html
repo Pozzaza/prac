@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom style to reduce the distance between logo and text */
+        .navbar-brand img {
+            margin-right: 5px; /* Adjust the margin as needed */
+        }
+
+        /* Custom styles for the body content */
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #007bff;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #495057;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: #495057;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Info section styles */
+        .info-section {
+            background-color: #007bff;
+            padding: 30px;
+            border-radius: 10px;
+            color: #fff;
+            transition: background-color 0.5s ease-in-out;
+            margin-top: 20px;
+        }
+
+        /* Adjusted spacing for better readability */
+        .info-section p {
+            margin-bottom: 15px;
+        }
+
+        /* Hover effect for info section */
+        .info-section:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the call-to-action button */
+        .cta-button {
+            background-color: #fff;
+            color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        /* Hover effect for the CTA button */
+        .cta-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Styling for the modified Buy Now button */
+        .cta-button, .buy-button {
+            background-color: #fff;
+            color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            border: 2px solid #007bff; /* Add border */
+        }
+
+        /* Hover effect for the modified Buy Now button */
+        .buy-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Center-align the "Welcome to NeoVPN" */
+        .welcome-text {
+            text-align: center;
+        }
+
+        /* Bigger and center-align text for the first info-section */
+        .first-info-section {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Separate wp-block-column info-sections */
+        .wp-block-columns {
+            gap: 20px;
+        }
+
+        /* Add a line to separate the second wp-block-column */
+        .separator-line {
+            width: 100%;
+            height: 2px;
+            background-color: #007bff;
+            margin: 20px 0;
+        }
+
+        /* Center-align the "Why Choose Us" heading */
+        .why-choose-us {
+            text-align: center;
+        }
+
+        /* Adjust spacing for the lists and buttons */
+        .why-choose-us ul {
+            margin-bottom: 20px;
+            list-style: inside;
+            padding-left: 0;
+        }
+
+        .why-choose-us li {
+            font-size: 1.2em;
+        }
+
+        .why-choose-us .cta-button, .why-choose-us .buy-button {
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <title>NeoVPN</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/img/logo.png" alt="NeoVPN" width="50" height="50">
+            NeoVPN
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">What Is VPN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Download VPN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">VPN Servers</a>
+                </li>
+            </ul>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="/account/index.html">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row welcome-text">
+            <div class="col-md-12 text-center fade-in">
+                <h1>Welcome to NeoVPN</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="wp-block-columns fade-in">
+                <div class="wp-block-column info-section first-info-section">
+                    <p>Enhance your online privacy and security with our state-of-the-art VPN service. NeoVPN ensures your connection is always secure, allowing you to browse the internet with confidence.</p>
+
+                    <p>Our high-speed servers worldwide guarantee a seamless and fast browsing experience. NeoVPN offers user-friendly applications for all devices, making it easy for you to stay protected.</p>
+
+                    <p>Join NeoVPN today and enjoy the benefits of secure and private connections. Your online freedom starts here!</p>
+
+                    <a href="/purchase/index.html" class="cta-button">Get Started</a>
+                </div>
+                <div class="separator-line"></div>
+                <div class="wp-block-column fade-in why-choose-us">
+                    <h2>Why Choose Us</
+                        <h2>Why Choose Us</h2>
+                        <ul>
+                            <li>Enhanced security and privacy</li>
+                            <li>High-speed servers worldwide</li>
+                            <li>User-friendly applications for all devices</li>
+                        </ul>
+    
+                        <a href="/purchase/index.html" class="buy-button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    
